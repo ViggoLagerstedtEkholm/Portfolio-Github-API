@@ -1,0 +1,128 @@
+[
+  {
+    "Course": "Webbutveckling II",
+    "Credits": "7.5",
+    "University": "Stockholm Universitet",
+    "Course Code": "IB918N",
+    "Grade": "A"
+  },
+  {
+    "Course": "Programmering för mobiler",
+    "Credits": "7.5",
+    "University": "Stockholm Universitet",
+    "Course Code": "IB916N",
+    "Grade": "A"
+  },
+  {
+    "Course": "Introduktion till cybersäkerhet G1N",
+    "Credits": "15.0",
+    "University": "Högskolan i Skövde",
+    "Course Code": "IT146G",
+    "Grade": "A"
+  },
+  {
+    "Course": "Datakommunikation",
+    "Credits": "7.5",
+    "University": "Umeå Universitet",
+    "Course Code": "5EL131",
+    "Grade": "5"
+  },
+  {
+    "Course": "Informatik med systemvetenskaplig inriktning, grundkurs",
+    "Credits": "30.0",
+    "University": "Örebro Universitet",
+    "Course Code": "IK100G",
+    "Grade": "VG"
+  },
+  {
+    "Course": "Informatik, Kravhantering, fortsättningskurs",
+    "Credits": "7.5",
+    "University": "Örebro Universitet",
+    "Course Code": "IK205G",
+    "Grade": "VG"
+  },
+  {
+    "Course": "Informatik, Objektorienterad analys och design, fortsättningskurs",
+    "Credits": "7.5",
+    "University": "Örebro Universitet",
+    "Course Code": "IK206G",
+    "Grade": "VG"
+  },
+  {
+    "Course": "Informatik, Interaktionsdesign, fortsättningskurs",
+    "Credits": "7.5",
+    "University": "Örebro Universitet",
+    "Course Code": "IK208G",
+    "Grade": "VG"
+  },
+  {
+    "Course": "Informatik, Klientprogrammering för webbsystem, fortsättningskurs",
+    "Credits": "7.5",
+    "University": "Örebro Universitet",
+    "Course Code": "IK201G",
+    "Grade": "VG"
+  },
+  {
+    "Course": "Informatik, Objektorienterad programmering med C#, fortsättningskurs",
+    "Credits": "7.5",
+    "University": "Örebro Universitet",
+    "Course Code": "IK202G",
+    "Grade": "VG"
+  },
+  {
+    "Course": "Informatik, Databashantering med SQL Server, fortsättningskurs",
+    "Credits": "7.5",
+    "University": "Örebro Universitet",
+    "Course Code": "IK203G",
+    "Grade": "VG"
+  },
+  {
+    "Course": "Informatik, Webbsystem med .NET, fortsättningskurs",
+    "Credits": "7.5",
+    "University": "Örebro Universitet",
+    "Course Code": "IK204G",
+    "Grade": "VG"
+  },
+  {
+    "Course": "Datastrukturer och algoritmer",
+    "Credits": "7.5",
+    "University": "Örebro Universitet",
+    "Course Code": "DT133G",
+    "Grade": "5"
+  },
+  {
+    "Course": "Informatik med systemvetenskaplig inriktning, kandidatkurs",
+    "Credits": "30.0",
+    "University": "Örebro Universitet",
+    "Course Code": "IK300G",
+    "Grade": "VG"
+  },
+  {
+    "Course": "Informatik, Systemutvecklingsprojekt, fortsättningskurs",
+    "Credits": "30.0",
+    "University": "Örebro Universitet",
+    "Course Code": "IK209G",
+    "Grade": "VG"
+  },
+  {
+    "Course": "Informatik, Systemutvecklingsprojekt med Scrum och Extreme Programming, fortsättningskurs",
+    "Credits": "7.5",
+    "University": "Örebro Universitet",
+    "Course Code": "IK207G",
+    "Grade": "G"
+  },
+  {
+    "Course": "Introduktion till artificiell intelligens",
+    "Credits": "7.5",
+    "University": "Luleå Tekniska Universitet",
+    "Course Code": "D0030E",
+    "Grade": "G#"
+  },
+  {
+    "Course": "Total credits:",
+    "Credits": "202,5",
+    "University": "",
+    "Course Code": "",
+    "Grade": ""
+  }
+]

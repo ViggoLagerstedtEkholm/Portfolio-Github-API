@@ -1,26 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { createContext } from 'react';
+import useFetch from "./Components/useFetchAPI";
+import { Container, Row } from "react-bootstrap";
+import Loading from "./Components/Loading";
+import Repositories from "./Components/Repositories";
+import Profile from "./Components/Profile";
+import {IRepositories} from "./Components/Interfaces/RepositoryInterface";
+import {IProfile} from "./Components/Interfaces/ProfileInterface";
+
+interface Data{
+    repositories: IRepositories[] | null,
+    profile: IProfile | null
+}
+
+export const GithubContext = createContext<Data | null>(null);
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [repositories, doneRepositoryFetch] = useFetch<IRepositories[]>("/github.json");
+    const [profile, doneProfileFetch] = useFetch<IProfile>("/profile.json");
+
+    const data = {
+        repositories: repositories,
+        profile: profile
+    }
+
+    if (!doneRepositoryFetch || !doneProfileFetch) {
+        return <Loading/>
+    }
+
+    return (
+        <GithubContext.Provider value={data}>
+            <Container className="vh-100">
+                <Row className="mb-3 w-100 mt-3">
+                    <Profile/>
+                </Row>
+                <Row>
+                    <Repositories/>
+                </Row>
+            </Container>
+        </GithubContext.Provider>
+    );
 }
 
 export default App;
