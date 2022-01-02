@@ -21,9 +21,9 @@ interface Data{
 export const GithubContext = createContext<Data | null>(null);
 
 function App() {
-    const [repositories, doneRepositoryFetch] = useFetch<IRepositories[]>("/github.json");
-    const [profile, doneProfileFetch] = useFetch<IProfile>("/profile.json");
-    const [courses, doneCourseFetch] = useFetch<ICourses[]>("/courses.json");
+    const [repositories, doneRepositoryFetch] = useFetch<IRepositories[]>("https://viggolagerstedtekholm.github.io/data-hosting-api/Data/github.json");
+    const [profile, doneProfileFetch] = useFetch<IProfile>("https://viggolagerstedtekholm.github.io/data-hosting-api/Data/profile.json");
+    const [courses, doneCourseFetch] = useFetch<ICourses[]>("https://viggolagerstedtekholm.github.io/data-hosting-api/Data/courses.json");
 
     const data = {
         repositories: repositories,
