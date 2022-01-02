@@ -1,15 +1,21 @@
 import React, { createContext } from 'react';
+import { Container, Stack } from "react-bootstrap";
+
 import useFetch from "./Components/useFetchAPI";
-import { Container, Row } from "react-bootstrap";
 import Loading from "./Components/Loading";
 import Repositories from "./Components/Repositories";
 import Profile from "./Components/Profile";
-import {IRepositories} from "./Components/Interfaces/RepositoryInterface";
-import {IProfile} from "./Components/Interfaces/ProfileInterface";
+import Courses from "./Components/Courses";
+import NavigationBar from "./Components/NavigationBar";
+
+import { IRepositories } from "./Components/Interfaces/RepositoryInterface";
+import { IProfile } from "./Components/Interfaces/ProfileInterface";
+import { ICourses } from "./Components/Interfaces/CoursesInterface";
 
 interface Data{
     repositories: IRepositories[] | null,
-    profile: IProfile | null
+    profile: IProfile | null,
+    courses: ICourses[] | null;
 }
 
 export const GithubContext = createContext<Data | null>(null);
@@ -17,25 +23,27 @@ export const GithubContext = createContext<Data | null>(null);
 function App() {
     const [repositories, doneRepositoryFetch] = useFetch<IRepositories[]>("/github.json");
     const [profile, doneProfileFetch] = useFetch<IProfile>("/profile.json");
+    const [courses, doneCourseFetch] = useFetch<ICourses[]>("/courses.json");
 
     const data = {
         repositories: repositories,
-        profile: profile
+        profile: profile,
+        courses: courses
     }
 
-    if (!doneRepositoryFetch || !doneProfileFetch) {
+    if (!doneRepositoryFetch || !doneProfileFetch || !doneCourseFetch) {
         return <Loading/>
     }
 
     return (
         <GithubContext.Provider value={data}>
-            <Container className="vh-100">
-                <Row className="mb-3 w-100 mt-3">
+            <NavigationBar/>
+            <Container className="vh-100 pb-3">
+                <Stack>
                     <Profile/>
-                </Row>
-                <Row>
+                    <Courses/>
                     <Repositories/>
-                </Row>
+                </Stack>
             </Container>
         </GithubContext.Provider>
     );
